@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawingBoard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-OS-pB8" customClass="DrawingBoard" customModule="DrawingBoard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="BXt-0y-l58">
+                                        <rect key="frame" x="16" y="657" width="382" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxr-FY-VFy">
+                                                <rect key="frame" x="0.0" y="0.0" width="126" height="30"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xas-G4-Sm1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElM-Hw-dwx">
+                                                <rect key="frame" x="256" y="0.0" width="126" height="30"/>
+                                                <state key="normal" title="Clear"/>
+                                                <connections>
+                                                    <action selector="clearDrawBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zfA-Dj-O8S"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhe-Z3-DqP">
+                                        <rect key="frame" x="160" y="74.5" width="94" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Change Color"/>
+                                        <connections>
+                                            <action selector="changeStrokeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d1E-no-Nkj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="uhe-Z3-DqP" firstAttribute="centerX" secondItem="ooh-OS-pB8" secondAttribute="centerX" id="0cW-ET-Po5"/>
+                                    <constraint firstItem="BXt-0y-l58" firstAttribute="leading" secondItem="ooh-OS-pB8" secondAttribute="leading" constant="16" id="4bY-5S-NME"/>
+                                    <constraint firstItem="BXt-0y-l58" firstAttribute="centerY" secondItem="ooh-OS-pB8" secondAttribute="centerY" multiplier="3/2" id="pJ3-3i-yff"/>
+                                    <constraint firstItem="BXt-0y-l58" firstAttribute="centerX" secondItem="ooh-OS-pB8" secondAttribute="centerX" id="vQS-Ko-YHM"/>
+                                    <constraint firstItem="uhe-Z3-DqP" firstAttribute="centerY" secondItem="ooh-OS-pB8" secondAttribute="centerY" multiplier="1/5" id="wyh-xV-cUH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ooh-OS-pB8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="66C-dH-vOB"/>
+                            <constraint firstAttribute="bottom" secondItem="ooh-OS-pB8" secondAttribute="bottom" id="Hpo-TQ-Vgn"/>
+                            <constraint firstItem="ooh-OS-pB8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uxR-tE-kfF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ooh-OS-pB8" secondAttribute="trailing" id="zYY-oG-3Hb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="board" destination="ooh-OS-pB8" id="KdZ-66-vK0"/>
+                        <outlet property="clearButton" destination="ElM-Hw-dwx" id="mCq-OD-TqB"/>
+                        <outlet property="saveImageButton" destination="Lxr-FY-VFy" id="LkL-dq-Ugg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+</document>
