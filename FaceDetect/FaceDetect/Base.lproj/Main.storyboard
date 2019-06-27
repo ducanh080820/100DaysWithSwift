@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceDetect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BAx-Du-geK">
+                                <rect key="frame" x="92" y="88.5" width="230" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="72m-LG-D0g"/>
+                                    <constraint firstAttribute="width" secondItem="BAx-Du-geK" secondAttribute="height" id="Qwk-FV-FM8"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BD4-Jk-9KJ">
+                                <rect key="frame" x="184" y="329.5" width="46" height="30"/>
+                                <state key="normal" title="Detect"/>
+                                <connections>
+                                    <action selector="clickToFaceDetect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22J-6l-EhH"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZX-mr-vpJ">
+                                <rect key="frame" x="92" y="378" width="230" height="230"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G70-rW-qxD">
+                                <rect key="frame" x="186" y="661.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BD4-Jk-9KJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6k0-6f-7rr"/>
+                            <constraint firstItem="PZX-mr-vpJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OYh-hS-G0C"/>
+                            <constraint firstItem="BAx-Du-geK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SB5-Jq-MJV"/>
+                            <constraint firstItem="PZX-mr-vpJ" firstAttribute="width" secondItem="BAx-Du-geK" secondAttribute="width" id="ZCB-Ol-6XK"/>
+                            <constraint firstItem="BD4-Jk-9KJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1/1.3" id="aqx-Oh-K0i"/>
+                            <constraint firstItem="G70-rW-qxD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hDK-wm-pfh"/>
+                            <constraint firstItem="G70-rW-qxD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="i2y-PP-Pqb"/>
+                            <constraint firstItem="PZX-mr-vpJ" firstAttribute="height" secondItem="BAx-Du-geK" secondAttribute="height" id="iad-4v-3mu"/>
+                            <constraint firstItem="PZX-mr-vpJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.1" id="xoA-7P-n4Q"/>
+                            <constraint firstItem="BAx-Du-geK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1/2.2" id="xqK-Ha-nSF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myOriginImageView" destination="BAx-Du-geK" id="ToQ-1S-mqz"/>
+                        <outlet property="myResultImageView" destination="PZX-mr-vpJ" id="D2N-ms-m3Q"/>
+                        <outlet property="myResultLabel" destination="G70-rW-qxD" id="DY9-uF-hig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+</document>
