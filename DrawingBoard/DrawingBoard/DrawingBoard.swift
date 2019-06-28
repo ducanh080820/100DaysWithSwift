@@ -14,7 +14,7 @@ class DrawingBoard: UIView {
     var pathColor: UIColor = UIColor.black
     var boardBackgroundColor: UIColor!
     
-    //MARK: 保存线条
+    //MARK: Save  ine
     var lines = [Line]()
     var touchPoint: CGPoint!
     
@@ -64,7 +64,7 @@ class DrawingBoard: UIView {
         
     }
     
-    //MARK: 保存图片
+    //MARK: Save Image
     func getImage() -> UIImage {
         
         UIGraphicsBeginImageContext(CGSize(width: self.bounds.size.width,
@@ -75,7 +75,7 @@ class DrawingBoard: UIView {
         return image
     }
     
-    //MARK: 清空画板
+    //MARK: Làm trống bản vẽ
     func clearBoard() {
         
         self.lines = []
