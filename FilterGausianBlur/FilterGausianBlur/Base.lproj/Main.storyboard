@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FilterGausianBlur" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FMT-sQ-L87">
+                                <rect key="frame" x="16" y="33" width="382" height="382"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FMT-sQ-L87" secondAttribute="height" id="pR9-Kk-6bI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="503-6K-XRF">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y8v-rW-qsN">
+                                <rect key="frame" x="14" y="657" width="386" height="31"/>
+                                <connections>
+                                    <action selector="changeValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OdO-cs-0jl"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FMT-sQ-L87" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1/2" id="7BB-uF-3de"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y8v-rW-qsN" secondAttribute="trailing" constant="16" id="7aJ-nE-Ioj"/>
+                            <constraint firstItem="FMT-sQ-L87" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8zo-a0-EKL"/>
+                            <constraint firstItem="FMT-sQ-L87" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Gg9-lS-AwU"/>
+                            <constraint firstItem="Y8v-rW-qsN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JNK-fT-mUz"/>
+                            <constraint firstItem="503-6K-XRF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NSc-zO-Dzh"/>
+                            <constraint firstItem="Y8v-rW-qsN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="XvH-fu-Ikb"/>
+                            <constraint firstItem="503-6K-XRF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fug-Gc-rZm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="FMT-sQ-L87" id="3yu-4V-GAO"/>
+                        <outlet property="label" destination="503-6K-XRF" id="Wqc-B0-bLj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="112"/>
+        </scene>
+    </scenes>
+</document>
