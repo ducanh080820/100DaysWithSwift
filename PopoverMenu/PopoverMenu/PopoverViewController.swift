@@ -18,9 +18,7 @@ class PopoverViewController: UIViewController, UITableViewDelegate, UITableViewD
     ]
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        super.viewDidLoad()        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,12 +26,9 @@ class PopoverViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! PopoverMenuTableViewCell
-        
         cell.menuImage.image = UIImage(named: data[indexPath.row].picture)
         cell.menuName.setTitle(data[indexPath.row].name, for: UIControl.State())
-        
         return cell
     }
     
@@ -45,6 +40,4 @@ class PopoverViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 }

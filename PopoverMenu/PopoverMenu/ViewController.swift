@@ -14,11 +14,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationItem.title = "We"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 73/255, green: 72/255, blue: 74/255, alpha: 1)
-        
     }
     
     @IBAction func plusButtonDidTouch(_ sender: UIBarButtonItem) {
@@ -29,7 +26,7 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         popoverVC.modalPresentationStyle = .popover
         popoverVC.preferredContentSize = CGSize(width: 200, height: 200)
         popoverVC.popoverPresentationController?.permittedArrowDirections = .up
-        popoverVC.popoverPresentationController?.backgroundColor = UIColor(red: 73/255, green: 72/255, blue: 74/255, alpha: 1)
+        popoverVC.popoverPresentationController?.backgroundColor = UIColor.yellow
         
         let popover = popoverVC.popoverPresentationController
         popover?.delegate = self
@@ -43,13 +40,8 @@ class ViewController: UIViewController, UIPopoverPresentationControllerDelegate 
         return .none
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-
-
-
 }
 
