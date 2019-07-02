@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         
         guassianBlur!.setValue(value, forKey: "inputRadius")
         let result = guassianBlur?.value(forKey: "outputImage") as! CIImage
-        let imageRef = context.createCGImage(result, from: CGRect(x: self.imageView.frame.origin.x, y: self.imageView.frame.origin.y, width: self.imageView.image!.size.width, height: self.imageView.image!.size.height))
+        let imageRef = context.createCGImage(result, from: CGRect(x: 0, y: 0, width: self.imageView.image!.size.width, height: self.imageView.image!.size.height))
         
         let image = UIImage(cgImage: imageRef!)
         self.imageView.image = image
