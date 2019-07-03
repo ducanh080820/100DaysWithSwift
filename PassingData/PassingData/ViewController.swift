@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DetailViewControllerDelegate {
+    func passData(string: String) {
+        myTextField.text = string
+    }
+    
     @IBOutlet weak var myTextField: UITextField!
     
     override func viewDidLoad() {
@@ -19,6 +23,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? DetailViewController
         destination?.dataText = myTextField.text
+        destination?.delegate = self
     }
 
     @IBAction func actionShow(_ sender: UIBarButtonItem) {
