@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7qj-4c-81c">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14810.12"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="P6b-LX-sb7">
+            <objects>
+                <tableViewController id="7qj-4c-81c" customClass="ViewController" customModule="SwipeableCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ubN-Jo-RjR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="v0f-f3-t6y" customClass="PartternTableViewCell" customModule="SwipeableCell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v0f-f3-t6y" id="zfC-q4-eTt">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e7v-hh-Bgw">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="e7v-hh-Bgw" secondAttribute="height" multiplier="3:1" id="eHx-Mq-FgG"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjR-pQ-o6e">
+                                            <rect key="frame" x="248" y="29.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="e7v-hh-Bgw" secondAttribute="bottom" id="6mB-K6-Pas"/>
+                                        <constraint firstItem="yjR-pQ-o6e" firstAttribute="centerY" secondItem="zfC-q4-eTt" secondAttribute="centerY" id="P1P-1M-EaU"/>
+                                        <constraint firstItem="e7v-hh-Bgw" firstAttribute="top" secondItem="zfC-q4-eTt" secondAttribute="top" id="QgB-R1-97V"/>
+                                        <constraint firstItem="yjR-pQ-o6e" firstAttribute="leading" secondItem="e7v-hh-Bgw" secondAttribute="trailing" constant="8" id="SCI-2I-bJZ"/>
+                                        <constraint firstItem="e7v-hh-Bgw" firstAttribute="leading" secondItem="zfC-q4-eTt" secondAttribute="leading" id="XM4-cR-uc2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="patternImageView" destination="e7v-hh-Bgw" id="MFn-t9-3dY"/>
+                                    <outlet property="patternNameLabel" destination="yjR-pQ-o6e" id="QbN-Ld-JAr"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7qj-4c-81c" id="gDy-wl-kd1"/>
+                            <outlet property="delegate" destination="7qj-4c-81c" id="Sbt-Ro-dfW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b36-4y-E1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150.72463768115944" y="178.79464285714286"/>
+        </scene>
+    </scenes>
+</document>
